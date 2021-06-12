@@ -8,8 +8,17 @@ import { NavLink } from 'react-router-dom';
 const useStyles = makeStyles(() => ({
 spacing:{
   paddingTop:'20px'
-}
-
+},
+  img:{
+    width:'100%',
+  paddingTop:'100px',
+  paddingLeft:'25px'
+  },
+  centerimg:{
+    display:'grid',
+    justifyContent:'center',
+    
+  }
 
  }))
 
@@ -42,8 +51,13 @@ Check out polymer clay jewelry selection for the best in unique.handmade peices 
  
  </div>
  </div>
- <div className="col-lg-6 order-l order-lg-2 header-img">
- {/* <img src={props.imgsrc} className="img-fluid animated"></img> */}
+ <div className="col-lg-6 order-l order-lg-2 header-img classes.centerimg">
+                <img
+                  className={classes.img}
+                  src="https://source.unsplash.com/user/erondu/1600x900"
+                />
+              </div>
+        </Grid>
  </div>
  </div>
  </div>
