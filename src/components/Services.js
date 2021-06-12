@@ -1,10 +1,31 @@
-import React from 'react'
+import { Grid } from "@material-ui/core";
+import React from "react";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  twodiv: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    padding: "30px",
+  },
+  img: {
+    width: "100%",
+  },
+  padding: {
+    padding: "25px",
+  },
+  text: {
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "30px",
+  },
+});
 
 const Services = () => {
-    return (
-        <>
-        
-           <Grid className={classes.twodiv}>
+  const classes = useStyles();
+  return (
+    <>
+      <Grid className={classes.twodiv}>
         <Grid className={classes.padding}>
           <img
             className={classes.img}
@@ -42,7 +63,7 @@ const Services = () => {
           />
         </Grid>
       </Grid>
-      <Grid className={classes.twodiv}>
+      <Grid >
       <Grid className={classes.padding}>
           <img
             className={classes.img}
@@ -62,8 +83,8 @@ const Services = () => {
         </Grid>
         
       </Grid>
-        </>
-    )
-}
+    </>
+  );
+};
 
-export default Services
+export default Services;
